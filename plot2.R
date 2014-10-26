@@ -11,6 +11,6 @@ bEmissionsByYear <- aggregate(Emissions ~ year, bEmissions, sum)
 #Printing of plot 
 png(file="plot2.png", bg="white")
 barplot(height=bEmissionsByYear$Emissions, names.arg=bEmissionsByYear$year, 
-        ylab="Baltamore city PM2 emissions",xlab="Years",
-        main="Baltamore City PM2 emissions by years")
+        ylab="Baltamore city emissions",xlab="Years",
+        main="Baltamore city fine particulate emissions by years")
 dev.off()
