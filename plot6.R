@@ -16,7 +16,7 @@ laEmissionsByYearType$City <- "Los Angeles County, CA"
 blaEmissions <- rbind(bEmissionsByYearType, laEmissionsByYearType)
 
 #Printing of plot 
-png(file="plot6.png", bg="transparent")
+png(file="plot6.png", bg="white")
 ggplot(blaEmissions, aes(x=factor(year), y=Emissions, fill=City))+
     geom_bar(stat="identity") +
     facet_grid(City ~ ., scales="free") +

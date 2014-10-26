@@ -7,7 +7,7 @@ bEmissions <- NEI[(NEI$fips=="24510") & (NEI$type=="ON-ROAD"),]
 bEmissionsByYearType <- aggregate(Emissions ~ year, bEmissions, sum)
 
 #Printing of plot 
-png(file="plot5.png", bg="transparent")
+png(file="plot5.png", bg="white")
 ggplot(bEmissionsByYearType,aes(x=factor(year),y=Emissions))+
     geom_bar(stat="identity")+
     xlab("Year")+

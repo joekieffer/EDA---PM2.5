@@ -11,7 +11,7 @@ coalEmissions <- NEI[(NEI$SCC %in% coalFuelSource$SCC),]
 
 coalEmissionsByYear <- aggregate(Emissions ~ year, coalEmissions, sum)
 #Printing of plot 
-png(file="plot4.png", bg="transparent")
+png(file="plot4.png", bg="white")
 ggplot(coalEmissionsByYear, aes(x=factor(year), y=Emissions))+
     geom_bar(stat="identity") +
     xlab("year")+

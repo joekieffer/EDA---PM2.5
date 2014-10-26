@@ -9,7 +9,7 @@ bEmissions <- NEI[NEI$fips=="24510",]
 bEmissionsByYearType <- aggregate(Emissions ~ year + type, bEmissions, sum)
 
 #Printing of plot 
-png(file="plot3.png", bg="transparent")
+png(file="plot3.png", bg="white")
 ggplot(bEmissionsByYearType,aes(x=factor(year),y=Emissions,fill=type))+
     geom_bar(stat="identity")+
     facet_grid(. ~ type) +
